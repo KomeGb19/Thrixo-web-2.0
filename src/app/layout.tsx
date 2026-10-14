@@ -7,6 +7,9 @@ import { Preloader } from "@/components/fx/preloader";
 import { SmoothScroll } from "@/components/fx/smooth-scroll";
 import { ScrollProgress } from "@/components/fx/scroll-progress";
 import Spinner from "@/components/fx/spinner";
+import { BottomNav } from "@/components/layout/bottom-nav";
+import { TopLogo } from "@/components/layout/top-logo";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thrixoagency.com.ng"),
@@ -33,7 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollProgress />
         <Spinner />
         <Cursor />
-        <Navbar />
+        <TopLogo />
+        {/* <Navbar /> */}
+        <BottomNav />
         <main>{children}</main>
         <Footer />
       </body>

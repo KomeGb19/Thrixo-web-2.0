@@ -59,7 +59,7 @@ export function Preloader() {
                   animate={{ y: 0 }}
                   exit={{ y: "-100%" }}
                   transition={{ duration: 0.3 }}
-                  className="font-serif text-6xl italic text-lime md:text-8xl"
+                  className="font-serif text-6xl italic text-brand md:text-8xl"
                 >
                   {word}.
                 </motion.p>

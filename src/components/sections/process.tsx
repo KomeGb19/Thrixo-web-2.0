@@ -35,7 +35,7 @@ function Card({ s, i }: { s: (typeof process)[number]; i: number }) {
 
 export function Process() {
   return (
-    <section className="px-5 pb-32 md:px-10" id="process">
+    <section className="px-5 pt-20 pb-32 md:px-10" id="process">
       <div className="mx-auto max-w-[1500px]">
         <div className="mb-14 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <SplitText text="Build one step at a *time*" className="text-5xl font-semibold tracking-[-0.04em] md:text-8xl" />

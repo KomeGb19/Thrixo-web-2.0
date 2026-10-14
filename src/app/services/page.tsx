@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Cta } from "@/components/sections/cta";
 import { Faq } from "@/components/sections/faq";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const metadata: Metadata = { title: "Services" };
 
@@ -27,7 +28,7 @@ export default function ServicesPage() {
                 <span className="font-mono text-sm text-brand">{s.n} / 06</span>
                 <h2 className="mt-3 text-5xl font-semibold leading-none tracking-[-0.04em] md:text-7xl">{s.title}</h2>
                 <div className={cn("mt-8 hidden aspect-[16/10] place-items-center rounded-3xl md:grid", s.accent)}>
-                  <span className="font-serif text-7xl italic">{s.title.split(" ")[0]}</span>
+                  <Image src={s.image || "/project.png"} alt={s.title} width={300} height={300} className="rounded-3xl object-cover" />
                 </div>
               </div>
               <div className="md:col-span-7">

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ───────────────────────────────────────────────
    THRIXO DESIGN TOKENS
@@ -68,6 +69,61 @@ html.lenis body {
   height: auto;
 }
 
+/* DARK MODE: swaps ink/paper tokens */
+html.dark {
+  color-scheme: dark;
+  --color-paper: #121214;
+  --color-paper-2: #1d1d21;
+  --color-ink: #f3efe6;
+  --color-ink-2: #e9e4d7;
+}
+
+/* Coloured surfaces keep light-theme tokens so their contents never invert */
+@layer base {
+
+  .theme-light,
+  [class~="bg-lime"],
+  [class~="bg-coral"],
+  [class~="bg-sky"],
+  [class~="bg-brand-soft"],
+  [class~="bg-brand"],
+  [class~="bg-ink"] {
+    --color-paper: #f3efe6;
+    --color-paper-2: #e9e4d7;
+    --color-ink: #0d0d0d;
+    --color-ink-2: #1a1a1a;
+  }
+
+  [class~="bg-lime"],
+  [class~="bg-coral"],
+  [class~="bg-sky"],
+  [class~="bg-brand-soft"] {
+    color: #0d0d0d;
+  }
+
+  [class~="bg-brand"] {
+    color: #fff;
+  }
+
+  [class~="bg-ink"] {
+    color: #f3efe6;
+  }
+}
+
+html.dark a[class~="bg-ink"],
+html.dark button[class~="bg-ink"] {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .2);
+}
+
+html.dark .text-brand {
+  color: #FA3E04;
+}
+
+html.dark .grain::after {
+  mix-blend-mode: screen;
+  opacity: .05;
+}   
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
@@ -78,6 +134,7 @@ body {
   font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color .4s ease, color .4s ease;
 }
 
 ::selection {

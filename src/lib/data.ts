@@ -2,7 +2,7 @@ export const site = {
   name: "Thrixo",
   url: "https://www.thrixoagency.com.ng",
   whatsapp: "https://wa.link/271fs7",
-  email: "hello@thrixoagency.com.ng", // TODO: confirm real inbox
+  email: "Thrixoagency@gmail.com", // TODO: confirm real inbox
   city: "Lagos, Nigeria",
   tagline: "Building tools of the future",
   socials: [
@@ -29,6 +29,7 @@ export type Service = {
   deliverables: string[];
   tools: string[];
   accent: string; // tailwind bg class
+  image?: string; // optional image path for service
 };
 
 export const services: Service[] = [
@@ -41,6 +42,7 @@ export const services: Service[] = [
     deliverables: ["Brand websites & landing pages", "E-commerce & booking flows", "Web apps & customer portals", "CMS setup & editor training", "SEO foundations & analytics", "Speed, a11y & QA audits"],
     tools: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Framer Motion", "Vercel"],
     accent: "bg-lime",
+    image: "/webdesign.png",
   },
   {
     id: "graphics",
@@ -51,6 +53,7 @@ export const services: Service[] = [
     deliverables: ["Logo & identity systems", "Brand guidelines", "Social & campaign kits", "Packaging & print", "Pitch & sales decks", "Illustration & iconography"],
     tools: ["Figma", "Illustrator", "Photoshop", "After Effects", "Blender"],
     accent: "bg-coral",
+    image: "/graphics.png",
   },
   {
     id: "pm",
@@ -61,6 +64,7 @@ export const services: Service[] = [
     deliverables: ["Scoping & roadmapping", "Sprint planning & delivery", "Stakeholder reporting", "Vendor & freelancer coordination", "Launch checklists", "Post-launch retros"],
     tools: ["Notion", "Linear", "Slack", "Loom", "Google Workspace"],
     accent: "bg-sky",
+    image: "/project.png",
   },
   {
     id: "video",
@@ -71,6 +75,7 @@ export const services: Service[] = [
     deliverables: ["Brand & campaign films", "Product explainers", "Short-form social edits", "Motion graphics & logo stings", "Event & behind-the-scenes", "Colour, sound & subtitling"],
     tools: ["Premiere Pro", "DaVinci Resolve", "After Effects", "Cinema 4D"],
     accent: "bg-brand text-white",
+    image: "/video.png",
   },
   {
     id: "ai",
@@ -81,6 +86,7 @@ export const services: Service[] = [
     deliverables: ["AI-assisted copy & scripts", "Generative imagery & ad creative", "Voice-over & avatar video", "Content calendars at scale", "Brand-tuned prompt libraries", "Team training & workflows"],
     tools: ["Claude", "Midjourney", "ElevenLabs", "Runway", "Python"],
     accent: "bg-paper-2",
+    image: "/intelligence.png",
   },
   {
     id: "infra",
@@ -91,6 +97,7 @@ export const services: Service[] = [
     deliverables: ["Workflow automation", "API & MCP integrations", "Cloud & CI/CD pipelines", "WhatsApp & comms automation", "Dashboards & reporting", "Monitoring & support"],
     tools: ["Python", "Node", "Postgres", "n8n", "Docker", "MCP"],
     accent: "bg-ink text-paper",
+    image: "/auto.png",
   },
 ];
 
@@ -107,37 +114,40 @@ export type Project = {
   results: { k: string; v: string }[];
   challenge: string;
   solution: string;
+  image?: string; // optional image path for project
 };
 
 // NOTE: placeholder case studies. Replace with real client work.
 export const projects: Project[] = [
   {
-    slug: "rica-marine-portal",
-    title: "Rica Marine Ops Portal",
+    slug: "rica-marine-website",
+    title: "Rica Marine Website",
     client: "Rica Marine",
-    category: "Systems",
+    category: "Web",
     year: "2026",
-    blurb: "A logistics command centre that replaced scattered scripts and spreadsheets.",
+    blurb: "A Marketing website for a global maritime services company.",
     role: ["Product design", "Web app", "Automation"],
     bg: "bg-brand",
     fg: "text-white",
     results: [{ k: "Manual work removed", v: "80%" }, { k: "Time to deploy", v: "< 1 week" }, { k: "Integrations", v: "24" }],
-    challenge: "Operations lived across scripts, services and manual handoffs. Nobody could say with confidence what was happening on a vessel right now.",
+    challenge: "Migrating Old Website from Wordpress and maintaing existing database, Building new modern  website and Knowledge-based Chatbot for customer support",
     solution: "We centralised everything into one workflow layer with a live dashboard, automated handoffs and alerts, so the system now reveals what's happening instead of hiding it.",
+    image: "projects/rica.png"
   },
   {
-    slug: "blockwell-integrated",
-    title: "Blockwell Automation Suite",
-    client: "Blockwell",
-    category: "AI",
+    slug: "palisglobal",
+    title: "Palis System Global",
+    client: "Palis System Global",
+    category: "Web",
     year: "2026",
-    blurb: "AI-driven logic that turns sprint-long workflows into minutes.",
+    blurb: "A marketing website for a real estate company with property showcase.",
     role: ["AI workflows", "API integration", "Dashboard"],
     bg: "bg-lime",
     fg: "text-ink",
     results: [{ k: "Sprint tasks automated", v: "Entire" }, { k: "Review time", v: "-64%" }, { k: "Uptime", v: "99.9%" }],
     challenge: "Engineers were burning whole sprints on repetitive, rules-heavy workflows.",
     solution: "We designed an AI-assisted pipeline with human review gates, wired into their existing tools through MCP-connected APIs.",
+    image: "projects/palis.png"
   },
   {
     slug: "pwan-support-hub",
@@ -189,7 +199,7 @@ export const projects: Project[] = [
     year: "2026",
     blurb: "A month of on-brand content, generated, edited and scheduled in a week.",
     role: ["Brand voice", "Prompt systems", "Content ops"],
-    bg: "bg-paper-2",
+    bg: "bg-brand-soft",
     fg: "text-ink",
     results: [{ k: "Posts per month", v: "120" }, { k: "Production cost", v: "-58%" }, { k: "Engagement", v: "+2.3x" }],
     challenge: "Great ideas, no capacity. Content went out late, inconsistent and off-voice.",
@@ -213,8 +223,14 @@ export const testimonials = [
   { q: "Honestly, I forgot half our automations existed. That's when you know it's working.", name: "Sofia Li", role: "Head of Engineering", co: "Luma Labs" },
 ];
 
-export const clients = ["Rica Marine", "Blockwell", "PWAN", "Nuva Tech", "Luma Labs", "Forge Studio"];
-
+export const clients = [
+  { id: 1, name: "Rica Marine", logo: "/clients/rica.png" },
+  { id: 2, name: "Blockwell Integrated", logo: "/clients/blockwell.png" },
+  { id: 3, name: "PWAN", logo: "/clients/pwan.png" },
+  { id: 4, name: "ProsLanding", logo: "/clients/pros.png" },
+  { id: 5, name: "Palis Global", logo: "/clients/palis.png" },
+];
+  
 export const stats = [
   { to: 100, suffix: "+", label: "Connected tools & integrations" },
   { to: 51.4, suffix: "%", prefix: "+", label: "Average conversion lift", decimals: 1 },

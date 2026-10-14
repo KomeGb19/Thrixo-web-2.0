@@ -68,7 +68,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         </div>
       </section>
 
-      <Link href={`/work/${next.slug}`} data-cursor="Next" className={cn("group relative block overflow-hidden px-5 py-28 md:px-10", next.bg, next.fg)}>
+      <Link href={`/work/${next.slug}`} data-cursor="Next" className={cn("group relative block overflow-hidden px-5 py-28 mb-10 md:px-10", next.bg, next.fg)}>
         <p className="font-mono text-xs uppercase tracking-[0.25em] opacity-70">Next project</p>
         <p className="mt-4 flex items-center gap-4 text-[clamp(2.5rem,8vw,7rem)] font-semibold leading-none tracking-[-0.045em]">
           {next.title} <ArrowUpRight className="size-[1em] shrink-0 transition-transform duration-500 group-hover:rotate-45" />

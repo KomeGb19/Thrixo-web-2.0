@@ -15,7 +15,7 @@ export function WorkGrid() {
       <div className="mx-auto max-w-[1500px]">
         <div className="mb-12 flex flex-wrap gap-2">
           {cats.map((c) => (
-            <button key={c} onClick={() => setCat(c)} className={cn("relative rounded-full border border-ink/20 px-5 py-2.5 font-medium transition-colors", cat === c ? "text-paper" : "hover:bg-ink/5")}>
+            <button key={c} onClick={() => setCat(c)} className={cn("relative rounded-full border border-ink/20 px-5 py-2.5 font-medium transition-colors", cat === c ? "text-brand" : "hover:bg-ink/5")}>
               {cat === c && <motion.span layoutId="work-pill" className="absolute inset-0 rounded-full bg-ink" transition={{ type: "spring", stiffness: 400, damping: 32 }} />}
               <span className="relative">{c}</span>
             </button>

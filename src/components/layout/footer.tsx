@@ -19,7 +19,7 @@ function LagosClock() {
 export function Footer() {
   const [sent, setSent] = useState(false);
   return (
-    <footer className="relative overflow-hidden bg-ink px-5 pb-8 pt-24 text-paper md:px-10">
+    <footer className="relative overflow-hidden bg-ink px-5 pb-8 pt-24 text-paper md:px-15">
       <div className="mx-auto max-w-[1500px]">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
