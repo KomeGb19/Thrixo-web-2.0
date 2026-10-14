@@ -65,7 +65,7 @@ function Bars() {
 
 function Kanban() {
   const cols = [
-    { t: "Brief", c: ["Moodboard", "Scope"] },
+    { t: "Brief", c: ["Idea", "Scope"] },
     { t: "Build", c: ["Hero", "CMS", "QA"] },
     { t: "Live", c: ["Launch"] },
   ];

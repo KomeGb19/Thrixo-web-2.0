@@ -26,7 +26,7 @@ export function Pricing() {
                 onClick={() => setMode(m)}
                 className={cn(
                   "relative z-10 rounded-full px-6 py-3 font-medium capitalize transition-colors",
-                  mode === m ? "text-paper" : "text-ink/60",
+                  mode === m ? "text-paper dark:text-lime" : "text-ink/60",
                 )}
               >
                 {mode === m && (
