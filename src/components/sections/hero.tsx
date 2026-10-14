@@ -7,6 +7,7 @@ import { Magnetic } from "@/components/fx/magnetic";
 import { Marquee } from "@/components/fx/marquee";
 import { Badge } from "@/components/ui/badge";
 import { site } from "@/lib/data";
+import Image from "next/image";
 
 const words = ["websites", "brands", "films", "AI content", "systems"];
 
@@ -34,13 +35,7 @@ export function Hero() {
       <motion.div style={{ y: y2 }} className="absolute right-[22%] top-[58%] hidden md:block">
         <div style={{ "--r": "8deg" } as React.CSSProperties} className="animate-float rounded-full bg-coral px-6 py-3 text-lg font-semibold shadow-[0_8px_0_rgba(0,0,0,.12)] [animation-delay:-2s]">Made in Lagos</div>
       </motion.div>
-      <motion.div style={{ rotate: rot }} className="absolute -left-16 top-[48%] hidden size-44 place-items-center rounded-full bg-brand text-white md:grid">
-        <svg viewBox="0 0 100 100" className="absolute inset-0 animate-spin-slow">
-          <defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" /></defs>
-          <text className="fill-white font-mono text-[9.5px] uppercase tracking-[0.25em]"><textPath href="#c">design • build • automate • launch •</textPath></text>
-        </svg>
-        <span className="font-serif text-4xl italic">t</span>
-      </motion.div>
+     
 
       <div className="relative z-10 mx-auto w-full max-w-[1500px]">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 2.1 }} className="mb-8 flex flex-wrap items-center gap-3">
@@ -81,7 +76,7 @@ export function Hero() {
             </Magnetic>
             <Magnetic>
               <Link href="/work" data-cursor="Play" className="inline-flex h-16 items-center gap-3 rounded-full border border-ink/25 px-8 text-lg font-medium transition-colors hover:bg-lime">
-                <span className="grid size-8 place-items-center rounded-full bg-ink text-lime"><Play className="size-3 fill-current" /></span>
+                <span className="grid size-8 place-items-center rounded-full bg-ink text-brand"><Play className="size-3 fill-current" /></span>
                 See the work
               </Link>
             </Magnetic>

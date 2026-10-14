@@ -48,7 +48,7 @@ export function Cursor() {
   return (
     <motion.div
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-[200] grid place-items-center rounded-full bg-lime text-ink mix-blend-normal"
+      className="pointer-events-none fixed left-0 top-0 z-[200] grid place-items-center rounded-full bg-orange text-ink mix-blend-normal"
       style={{ x: sx, y: sy, translateX: "-50%", translateY: "-50%" }}
       animate={{ width: size, height: size, scale: down ? 0.85 : 1, opacity: hover || label ? 0.95 : 1 }}
       transition={{ type: "spring", stiffness: 400, damping: 28 }}

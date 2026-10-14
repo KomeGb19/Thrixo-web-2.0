@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { nav, site } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { Magnetic } from "@/components/fx/magnetic";
+import Image from "next/image";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -33,8 +34,8 @@ export function Navbar() {
         className="fixed inset-x-0 top-0 z-[100] px-4 pt-4 md:px-8"
       >
         <div className={cn("mx-auto flex max-w-[1500px] items-center justify-between rounded-full px-5 py-3 transition-all duration-300", scrolled && !open ? "bg-paper/80 shadow-[0_6px_30px_rgba(0,0,0,0.08)] backdrop-blur-xl" : "", open && "text-paper")}>
-          <Link href="/" className="relative z-[110] flex items-center gap-2 text-2xl font-semibold tracking-tight" data-cursor="Home">
-            <span className="grid size-9 place-items-center rounded-full bg-ink font-serif text-xl italic text-lime">t</span>
+          <Link href="/" className="relative z-[110] flex items-center text-2xl font-semibold tracking-tight" data-cursor="Home">
+            <Image src="/logo.png" alt="Thrixo Logo" width={32} height={32} className="h-10 w-10" />
             Thrixo
           </Link>
 
@@ -42,15 +43,15 @@ export function Navbar() {
             {nav.map((l) => (
               <Link key={l.href} href={l.href} className="group relative overflow-hidden rounded-full px-4 py-2 text-[15px] font-medium">
                 <span className={cn("relative z-10 transition-colors", pathname.startsWith(l.href) && "text-brand")}>{l.label}</span>
-                <span className="absolute inset-0 -z-0 translate-y-full rounded-full bg-lime transition-transform duration-300 group-hover:translate-y-0" />
+                <span className="absolute inset-0 -z-0 translate-y-full rounded-full bg-brand transition-transform duration-300 group-hover:translate-y-0" />
               </Link>
             ))}
           </nav>
 
           <div className="relative z-[110] flex items-center gap-2">
             <Magnetic strength={0.25} className="hidden md:inline-block">
-              <a href={site.whatsapp} target="_blank" rel="noreferrer" className="inline-flex h-11 items-center gap-1.5 rounded-full bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-brand">
-                Say Hello <span className="text-lime">+</span>
+              <a href={site.whatsapp} target="_blank" rel="noreferrer" className="inline-flex h-11 items-center gap-1.5 rounded-full bg-ink px-5 text-sm font-medium text-paper transition-colors hover:bg-brand hover:text-paper">
+                Say Hello <span className="text-brand hover">+</span>
               </a>
             </Magnetic>
             <button aria-label="Toggle menu" onClick={() => setOpen((o) => !o)} className={cn("grid size-11 place-items-center rounded-full border md:hidden", open ? "border-paper/30" : "border-ink/20")}>

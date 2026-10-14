@@ -6,6 +6,7 @@ import { Cursor } from "@/components/fx/cursor";
 import { Preloader } from "@/components/fx/preloader";
 import { SmoothScroll } from "@/components/fx/smooth-scroll";
 import { ScrollProgress } from "@/components/fx/scroll-progress";
+import Spinner from "@/components/fx/spinner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thrixoagency.com.ng"),
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Preloader />
         <SmoothScroll />
         <ScrollProgress />
+        <Spinner />
         <Cursor />
         <Navbar />
         <main>{children}</main>
