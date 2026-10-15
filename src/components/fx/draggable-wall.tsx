@@ -319,10 +319,9 @@ const stickers: Sticker[] = [
           fill={LIME}
           anchor="middle"
           serif
-          italic
           weight={400}
         >
-          t
+          🌍
         </Txt>
       </>
     ),
