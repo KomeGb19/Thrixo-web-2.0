@@ -43,7 +43,7 @@ export function WorkCard({
             alt={p.title}
             width={900}
             height={700}
-            className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="size-full object-cover transition-transform pointer-events-none select-none duration-700 group-hover:scale-105"
           />
           <span className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-white backdrop-blur-md">
             {p.category} · {p.year}

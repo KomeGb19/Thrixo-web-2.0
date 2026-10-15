@@ -175,20 +175,24 @@ export function Bento() {
 
               <Marquee speed={18} className="mt-8">
                 {[
-                  "Slack",
-                  "WhatsApp",
-                  "Notion",
-                  "Stripe",
-                  "Supabase",
-                  "Zapier",
-                  "GitHub",
-                  "Figma",
+                  {id: 1, name: "Slack", icon: "/integrations/slack.png"},
+                  {id: 2, name: "WhatsApp", icon: "/integrations/whatsapp.png"},
+                  {id: 3, name: "Notion", icon: "/integrations/notion.png"},
+                  {id: 4, name: "Stripe", icon: "/integrations/stripe.png"},
+                  {id: 5, name: "AWS", icon: "/integrations/aws.png"},
+                  {id: 6, name: "Adobe", icon: "/integrations/adobe.png"},
+                  {id: 7, name: "GitHub", icon: "/integrations/github.png"},
+                  {id: 8, name: "Figma", icon: "/integrations/figma.png"},
                 ].map((t) => (
                   <span
-                    key={t}
+                    key={t.id}
                     className="shrink-0 rounded-full border border-paper/20 px-4 py-2 text-sm"
                   >
-                    {t}
+                    <img
+                      src={t.icon}
+                      alt={t.name}
+                      className="size-5"
+                    />
                   </span>
                 ))}
               </Marquee>

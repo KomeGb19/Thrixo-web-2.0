@@ -89,7 +89,7 @@ function ServiceRow({
                 alt={s.title}
                 width={300}
                 height={300}
-                className="size-32 shrink-0 rounded-2xl object-cover sm:size-40"
+                className="size-32 shrink-0 rounded-2xl pointer-events-none select-none object-cover sm:size-40"
               />
               <div className="flex min-w-0 flex-1 flex-col justify-between py-1 pr-1">
                 <span className="font-mono text-[11px] uppercase tracking-widest opacity-70">
@@ -182,7 +182,7 @@ export function ServicesList() {
                     alt={services[active].title}
                     width={300}
                     height={300}
-                    className="aspect-square w-full rounded-2xl object-cover"
+                    className="aspect-square pointer-events-none select-none w-full rounded-2xl object-cover"
                   />
                   <div>
                     <p className="font-serif text-4xl italic leading-none">
