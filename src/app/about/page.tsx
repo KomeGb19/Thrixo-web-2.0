@@ -65,7 +65,7 @@ export default function AboutPage() {
               </TiltCard>
             ))}
           </div>
-          <p className="mt-8 font-mono text-xs uppercase tracking-widest text-paper/40">Placeholder roles. Swap in real names and photos in lib/data.ts.</p>
+          {/* <p className="mt-8 font-mono text-xs uppercase tracking-widest text-paper/40">Placeholder roles. Swap in real names and photos in lib/data.ts.</p> */}
         </div>
       </section>
 
