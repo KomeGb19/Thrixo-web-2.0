@@ -6,7 +6,6 @@ export const alt = "Thrixo Agency: Building tools of the future";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Replace with your real brand colours (your --ink and --lime values).
 const INK = "#0a0a0a";
 const LIME = "#c8f31d";
 

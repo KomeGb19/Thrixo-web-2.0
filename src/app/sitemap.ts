@@ -3,8 +3,7 @@ import type { MetadataRoute } from "next";
 
 const BASE = "https://www.thrixoagency.com.ng";
 
-// Add every public page here (e.g. "/work", "/services", "/about").
-const routes = ["", "/contact"];
+const routes = ["", "/work", "/services", "/about", "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

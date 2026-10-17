@@ -2,7 +2,7 @@ export const site = {
   name: "Thrixo",
   url: "https://www.thrixoagency.com.ng",
   whatsapp: "https://wa.link/271fs7",
-  email: "Thrixoagency@gmail.com", // TODO: confirm real inbox
+  email: "Thrixoagency@gmail.com",
   city: "Lagos, Nigeria",
   tagline: "Building tools of the future",
   socials: [
@@ -84,7 +84,7 @@ export const services: Service[] = [
     short: "AI-assisted, human-directed content at a pace and scale agencies can't match.",
     long: "We pair generative tools with real creative direction: on-brand copy, imagery, voice and video produced in volume, then edited by people with taste. You get speed without the soulless sameness.",
     deliverables: ["AI-assisted copy & scripts", "AI Film-making", "UGC", "Video Ads", "Generative imagery & ad creative", "Voice-over & avatar video", "Content calendars at scale", "Brand-tuned prompt libraries", "Team training & workflows"],
-    tools: ["Claude", "Midjourney", "Higgsfield", "ElevenLabs", "Runway", "Python"],
+    tools: ["Midjourney", "Higgsfield", "ElevenLabs", "Runway", "Python"],
     accent: "bg-paper-2",
     image: "/intelligence.png",
   },
@@ -117,7 +117,6 @@ export type Project = {
   image?: string; // optional image path for project
 };
 
-// NOTE: placeholder case studies. Replace with real client work.
 export const projects: Project[] = [
   {
     slug: "rica-marine-website",

@@ -6,8 +6,6 @@ const BRAND = "Thrixo Agency";
 const SITE_URL = "https://www.thrixoagency.com.ng";
 const LOGO_URL = `${SITE_URL}/logo.png`; // already live on your site
 
-// TODO: replace these with the hex values from your globals.css / Tailwind theme
-// (--ink, --lime, --paper, --paper-2, --brand). They're my best guesses from the site.
 const C = {
   ink: "#0b0b0f",
   lime: "#c8f31d",
