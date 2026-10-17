@@ -161,6 +161,7 @@ export const projects: Project[] = [
     results: [{ k: "Manual workflows replaced", v: "80%" }, { k: "Ticket deflection", v: "+41%" }, { k: "Launch", v: "7 days" }],
     challenge: "A support desk drowning in repeat requests and a site nobody could navigate.",
     solution: "A redesigned self-serve hub with smart routing and automation that resolves the repeatable stuff before a human sees it.",
+    image: "projects/pwan.png"
   },
   {
     slug: "nuva-tech-launch",
@@ -175,6 +176,7 @@ export const projects: Project[] = [
     results: [{ k: "Conversion rate", v: "+51.4%" }, { k: "Launch speed", v: "Faster than ever" }, { k: "Brand assets", v: "120+" }],
     challenge: "A capable team with a forgettable look, racing to launch before a funding window closed.",
     solution: "We built the identity, site and launch content in parallel sprints, on a system that scales and adapts instantly.",
+    image: "projects/nuva.png"
   },
   {
     slug: "luma-labs-reel",
@@ -189,6 +191,7 @@ export const projects: Project[] = [
     results: [{ k: "Watch-through rate", v: "72%" }, { k: "Cutdowns delivered", v: "14" }, { k: "Demo requests", v: "+38%" }],
     challenge: "A deeply technical product that kept losing people in the first ten seconds.",
     solution: "We turned the architecture into a visual story, then cut it into short-form versions for every channel.",
+    image: "projects/luma.png"
   },
   {
     slug: "forge-content-engine",
@@ -203,6 +206,7 @@ export const projects: Project[] = [
     results: [{ k: "Posts per month", v: "120" }, { k: "Production cost", v: "-58%" }, { k: "Engagement", v: "+2.3x" }],
     challenge: "Great ideas, no capacity. Content went out late, inconsistent and off-voice.",
     solution: "A brand-tuned prompt library plus a human editing loop that keeps quality high while volume goes up.",
+    image: "projects/forge.png"
   },
 ];
 
